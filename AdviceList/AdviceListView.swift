@@ -13,7 +13,7 @@ struct AdviceListView: View {
             VStack{
                 
                 HStack{
-                    TextField("Enter a to-do item", text: Binding.constant(""))
+                    TextField("Enter the advice to search", text: Binding.constant(""))
                         .padding()
                     Button(action: {
                         
