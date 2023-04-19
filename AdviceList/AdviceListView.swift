@@ -12,19 +12,13 @@ struct AdviceListView: View {
         NavigationView{
             VStack{
                 
-                HStack{
-                    TextField("Enter the advice to search", text: Binding.constant(""))
-                        .padding()
-                    Button(action: {
-                        
-                    }, label:{
-                        Text("ADD")
-                            .font(.caption)
-                        
-                    })
-                    .padding()
-                }
-                
+               
+                Text("State the problem in words as clearly as possible.")
+                    .font(.system(size: 30))
+                    .padding(50)
+                                
+                    
+
                 Button(action: {
                            
                        }) {
@@ -32,10 +26,21 @@ struct AdviceListView: View {
                                .font(.headline)
                                .padding()
                                .foregroundColor(.white)
+                               .background(Color.blue)
+                               .cornerRadius(10)
+                       }
+                Button(action: {
+                           
+                       }) {
+                           Text("Save Advice")
+                               .font(.caption)
+                               .bold()
+                               .padding()
+                               .foregroundColor(.white)
                                .background(Color.green)
                                .cornerRadius(10)
                        }
-                Spacer()
+                
             }
            
                 .navigationTitle("Random Advice")
