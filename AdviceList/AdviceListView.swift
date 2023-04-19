@@ -12,7 +12,11 @@ struct AdviceListView: View {
         NavigationView{
             VStack{
                 
-               
+                Image(systemName: "sun.max.fill")
+                                .resizable()
+                                .frame(width: 200, height: 200)
+                                .foregroundColor(.yellow)
+                                
                 Text("State the problem in words as clearly as possible.")
                     .font(.system(size: 30))
                     .padding(50)
