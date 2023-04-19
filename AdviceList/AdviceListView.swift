@@ -9,10 +9,40 @@ import SwiftUI
 
 struct AdviceListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            VStack{
+                
+                HStack{
+                    TextField("Enter a to-do item", text: Binding.constant(""))
+                        .padding()
+                    Button(action: {
+                        
+                    }, label:{
+                        Text("ADD")
+                            .font(.caption)
+                        
+                    })
+                    .padding()
+                }
+                
+                Button(action: {
+                           
+                       }) {
+                           Text("Generate Some Advice")
+                               .font(.headline)
+                               .padding()
+                               .foregroundColor(.white)
+                               .background(Color.green)
+                               .cornerRadius(10)
+                       }
+                Spacer()
+            }
+           
+                .navigationTitle("Random Advice")
+        }
+        
     }
 }
-
 struct AdviceListView_Previews: PreviewProvider {
     static var previews: some View {
         AdviceListView()
