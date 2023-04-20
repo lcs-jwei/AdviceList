@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Advice: Codable{
+struct Advice: Identifiable, Codable{
     let advice: String
     let id: Int
 }
