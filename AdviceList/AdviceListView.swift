@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AdviceListView: View {
+    
+    @State var currentAdvice = exampleAdvice
     var body: some View {
         NavigationView{
             VStack{
@@ -17,7 +19,7 @@ struct AdviceListView: View {
                                 .frame(width: 200, height: 200)
                                 .foregroundColor(.yellow)
                                 
-                Text("State the problem in words as clearly as possible.")
+                Text(currentAdvice.advice)
                     .font(.system(size: 30))
                     .padding(50)
                                 
