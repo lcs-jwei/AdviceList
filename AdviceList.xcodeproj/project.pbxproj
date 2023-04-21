@@ -17,6 +17,7 @@
 		DFD26E1629F2C8A500F62017 /* AdviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD26E1529F2C8A500F62017 /* AdviceView.swift */; };
 		DFD26E1929F31ABA00F62017 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = DFD26E1829F31ABA00F62017 /* Blackbird */; };
 		DFD26E1B29F31D0400F62017 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = DFD26E1A29F31D0400F62017 /* db.sqlite */; };
+		DFD26E1E29F3202800F62017 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD26E1D29F3202800F62017 /* AppDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DFD26E1329F16F3E00F62017 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DFD26E1529F2C8A500F62017 /* AdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceView.swift; sourceTree = "<group>"; };
 		DFD26E1A29F31D0400F62017 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
+		DFD26E1D29F3202800F62017 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			children = (
 				DFD26DFC29F02FA200F62017 /* AdviceListApp.swift */,
 				DFD26E1229F16F2B00F62017 /* Services */,
+				DFD26E1C29F3200600F62017 /* Helpers */,
 				DFD26E0D29F037A900F62017 /* Model */,
 				DFD26E0C29F02FFE00F62017 /* Views */,
 				DFD26E0A29F02FC100F62017 /* AdviceListView.swift */,
@@ -106,6 +109,14 @@
 				DFD26E1329F16F3E00F62017 /* NetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		DFD26E1C29F3200600F62017 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DFD26E1D29F3202800F62017 /* AppDatabase.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				DFD26E1429F16F3E00F62017 /* NetworkService.swift in Sources */,
 				DFD26E0B29F02FC100F62017 /* AdviceListView.swift in Sources */,
 				DFD26E1629F2C8A500F62017 /* AdviceView.swift in Sources */,
+				DFD26E1E29F3202800F62017 /* AppDatabase.swift in Sources */,
 				DFD26DFD29F02FA200F62017 /* AdviceListApp.swift in Sources */,
 				DFD26E1129F167DD00F62017 /* SearchResult.swift in Sources */,
 				DFD26E0F29F037BE00F62017 /* Advice.swift in Sources */,
