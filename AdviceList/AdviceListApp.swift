@@ -12,6 +12,7 @@ struct AdviceListApp: App {
     var body: some Scene {
         WindowGroup {
             AdviceListView()
+                .environment(\.blackbirdDatabase, AppDatabase.instance)
         }
     }
 }
