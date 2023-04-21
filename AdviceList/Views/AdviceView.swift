@@ -21,6 +21,7 @@ struct AdviceView: View {
                                 .resizable()
                                 .frame(width: 200, height: 200)
                                 .foregroundColor(.yellow)
+                                .padding()
                 Spacer()
                 if let currentAdvice = currentAdvice{
                     

@@ -12,8 +12,19 @@ import Blackbird
 struct AdviceListApp: App {
     var body: some Scene {
         WindowGroup {
-            AdviceListView()
-                .environment(\.blackbirdDatabase, AppDatabase.instance)
+            TabView{
+                AdviceView()
+                    .tabItem{
+                        Label("Advice", systemImage: "person.crop.circle.fill.badge.checkmark")
+                        
+                    }
+                AdviceListView()
+                    .tabItem{
+                        Label("Saved", systemImage: "star.fill")
+                    }
+            }
+            
+               .environment(\.blackbirdDatabase, AppDatabase.instance)
         }
     }
 }
