@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Blackbird
 
 @main
 struct AdviceListApp: App {

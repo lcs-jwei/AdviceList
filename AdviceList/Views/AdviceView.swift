@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import Blackbird
 
 struct AdviceView: View {
+    
+    @Environment(\.blackbirdDatabase) var db: Blackbird.Database?
+    
     @State var adviceOpacity = 0.0
     @State var currentAdvice: Advice?
     var body: some View {
@@ -45,7 +49,7 @@ struct AdviceView: View {
                     Task {
                         // Get another joke
                         withAnimation {
-                            adviceOpacity = 1.0
+                            adviceOpacity = 1
                         }
                         currentAdvice = await NetworkService.fetch()
                     }
@@ -58,6 +62,15 @@ struct AdviceView: View {
                         .cornerRadius(10)
                 })
                 Button(action: {
+                    Task{
+                        if let currentAdvice = currentAdvice{
+                            try await db!.transaction { core in
+                                try core.query("INSERT INTO Advice (advice, id) VALUES (?, ?)",
+                                               currentAdvice.advice,
+                                               currentAdvice.id)
+                            }
+                        }
+                    }
                            
                        }) {
                            Text("Save Advice")
@@ -84,5 +97,6 @@ struct AdviceView: View {
 struct AdviceView_Previews: PreviewProvider {
     static var previews: some View {
         AdviceView()
+            .environment(\.blackbirdDatabase, AppDatabase.instance)
     }
 }

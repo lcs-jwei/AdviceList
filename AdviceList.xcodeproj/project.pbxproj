@@ -71,7 +71,6 @@
 				DFD26E0D29F037A900F62017 /* Model */,
 				DFD26E0C29F02FFE00F62017 /* Views */,
 				DFD26E0A29F02FC100F62017 /* AdviceListView.swift */,
-				DFD26E1529F2C8A500F62017 /* AdviceView.swift */,
 				DFD26E0029F02FA400F62017 /* Assets.xcassets */,
 				DFD26E0229F02FA400F62017 /* Preview Content */,
 			);
@@ -89,6 +88,7 @@
 		DFD26E0C29F02FFE00F62017 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DFD26E1529F2C8A500F62017 /* AdviceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
