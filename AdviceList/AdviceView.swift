@@ -1,13 +1,13 @@
 //
-//  AdviceListView.swift
+//  AdviceView.swift
 //  AdviceList
 //
-//  Created by Justin Zack Wei on 2023-04-19.
+//  Created by Justin Zack Wei on 2023-04-21.
 //
 
 import SwiftUI
 
-struct AdviceListView: View {
+struct AdviceView: View {
     @State var adviceOpacity = 0.0
     @State var currentAdvice: Advice?
     var body: some View {
@@ -80,8 +80,9 @@ struct AdviceListView: View {
         }
     }
 }
-struct AdviceListView_Previews: PreviewProvider {
+
+struct AdviceView_Previews: PreviewProvider {
     static var previews: some View {
-        AdviceListView()
+        AdviceView()
     }
 }
